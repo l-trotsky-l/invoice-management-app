@@ -5,7 +5,7 @@ export async function GET() {
   try {
     const cookieStore = await cookies();
     const accessToken = cookieStore.get('qb_access_token')?.value;
-    const realmId = cookieStore.get('qb_realmId')?.value;
+    const realmId = cookieStore.get('qb_realm_id')?.value;
 
     console.log('QuickBooks Invoices API - Auth Check:', {
       hasAccessToken: !!accessToken,
@@ -32,11 +32,9 @@ export async function GET() {
       headers: {
         'Authorization': `Bearer ${accessToken}`,
         'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/text'
       },
-      body: JSON.stringify({
-        query: 'SELECT * FROM Invoice ORDER BY TxnDate DESC'
-      })
+      body: 'SELECT * FROM Invoice ORDER BY TxnDate DESC'
     });
 
     if (!response.ok) {
@@ -57,12 +55,9 @@ export async function GET() {
 
     return NextResponse.json(data.QueryResponse?.Invoice || []);
   } catch (error) {
-    console.error('QuickBooks Invoices API - Error:', error);
+    console.error('Error fetching invoices:', error);
     return NextResponse.json(
-      { 
-        error: 'Failed to fetch invoices',
-        details: error instanceof Error ? error.message : 'Unknown error'
-      },
+      { error: 'Failed to fetch invoices' },
       { status: 500 }
     );
   }

@@ -5,12 +5,15 @@ export async function GET() {
   try {
     console.log('Checking QuickBooks connection status...');
     const cookieStore = await cookies();
-    const accessToken = cookieStore.get('quickbooks_access_token');
-    const realmId = cookieStore.get('quickbooks_realm_id');
+    // const accessToken = cookieStore.get('quickbooks_access_token');
+    // const realmId = cookieStore.get('quickbooks_realm_id');
+
+    const accessToken = cookieStore.get('qb_access_token');
+    const realmId = cookieStore.get('qb_realmId');
 
     console.log('Cookie check:', {
-      hasAccessToken: !!accessToken,
-      hasRealmId: !!realmId
+      hasAccessToken: accessToken,
+      hasRealmId: realmId
     });
 
     if (!accessToken || !realmId) {
@@ -20,7 +23,10 @@ export async function GET() {
 
     // Test the connection by making a simple API call
     console.log('Testing QuickBooks API connection...');
-    const response = await fetch(`https://quickbooks.api.intuit.com/v3/company/${realmId.value}/companyinfo/1`, {
+    console.log('Access token:', accessToken.value);
+    console.log('Realm ID:', realmId.value);
+    
+    const response = await fetch(`https://quickbooks.api.intuit.com/v3/company/${realmId.value}/companyinfo/${realmId.value}`, {
       headers: {
         'Authorization': `Bearer ${accessToken.value}`,
         'Accept': 'application/json'
