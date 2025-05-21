@@ -15,8 +15,12 @@
     "intuit-oauth": "^4.2.0",
     "next": "15.3.2",
     "openai": "^4.100.0",
+    "openai-edge": "^1.2.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.3",
+    "zod": "^3.25.17",
+    "zustand": "^5.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

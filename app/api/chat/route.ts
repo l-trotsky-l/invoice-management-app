@@ -1,40 +1,47 @@
 import { OpenAIStream, StreamingTextResponse } from 'ai';
-import OpenAI from 'openai';
+import { Configuration, OpenAIApi } from 'openai-edge';
+import { tools, executeTool } from './tools';
 
 // Create an OpenAI API client
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+const config = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY
 });
+const openai = new OpenAIApi(config);
 
 export const runtime = 'edge';
 
 export async function POST(req: Request) {
-  try {
-    const { messages } = await req.json();
+  const { messages } = await req.json();
 
-    // Create a chat completion
-    const response = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
-      stream: true,
-      messages: [
-        {
-          role: 'system',
-          content: 'You are a helpful AI assistant for an invoice management system. You can help users with questions about invoices, QuickBooks integration, and general accounting queries. Keep your responses concise and professional.'
-        },
-        ...messages,
-      ],
-    });
-
-    // Convert the response into a friendly text-stream
-    const stream = OpenAIStream(response);
+  // Add system message with tool descriptions
+  const systemMessage = {
+    role: 'system',
+    content: `You are a helpful AI assistant that can access invoice data. You have access to the following tools:
+    ${tools.map(tool => `- ${tool.name}: ${tool.description}`).join('\n')}
     
-    // Return a StreamingTextResponse, which can be consumed by the client
-    return new StreamingTextResponse(stream);
-  } catch (error) {
-    console.error('Error in chat route:', error);
-    return new Response(
-      JSON.stringify({ error: 'Failed to process chat request' }),
-      { status: 500 }
-    );
+    When the user asks about invoices, use the appropriate tool to get the information.`
+  };
+
+  // Add the system message to the beginning of the conversation
+  const messagesWithSystem = [systemMessage, ...messages];
+
+  // Check if the last message is asking about the total number of invoices
+  const lastMessage = messages[messages.length - 1];
+  if (lastMessage.content.toLowerCase().includes('total number of invoices') ||
+      lastMessage.content.toLowerCase().includes('how many invoices')) {
+    const result = await executeTool('getTotalInvoices');
+    return new Response(JSON.stringify(result), {
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
+
+  // If not a tool request, use OpenAI for general conversation
+  const response = await openai.createChatCompletion({
+    model: 'gpt-3.5-turbo',
+    stream: true,
+    messages: messagesWithSystem,
+  });
+
+  const stream = OpenAIStream(response);
+  return new StreamingTextResponse(stream);
 } 
