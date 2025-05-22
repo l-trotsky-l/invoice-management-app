@@ -3,35 +3,12 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useInvoiceStore } from '../app/store/invoiceStore';
-import { tools } from '../app/utils/toolRegistry';
 import InvoiceAnalytics from './InvoiceAnalytics';
-
-interface Invoice {
-  Id: string;
-  DocNumber: string;
-  TxnDate: string;
-  CustomerRef: {
-    name: string;
-  };
-  TotalAmt: number;
-  Balance: number;
-  status: string;
-}
-
-// Create a global event emitter for AI chatbot
-declare global {
-  interface Window {
-    invoiceData: {
-      invoices: Invoice[];
-      tools: typeof tools;
-    };
-  }
-}
 
 export default function QuickBooksConnection() {
   const [isConnecting, setIsConnecting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const { invoices, setInvoices } = useInvoiceStore();
+  const { invoices, setInvoices, printInvoiceDetails } = useInvoiceStore();
 
   useEffect(() => {
     // Check if we have QuickBooks tokens
@@ -41,6 +18,12 @@ export default function QuickBooksConnection() {
         if (response.ok) {
           const data = await response.json();
           setInvoices(data);
+          
+          // Print details of the first invoice if available
+          if (data.length > 0) {
+            console.log('\nPrinting sample invoice details...');
+            printInvoiceDetails(data[0].Id);
+          }
         }
       } catch (err) {
         console.error('Error checking connection:', err);
@@ -48,15 +31,7 @@ export default function QuickBooksConnection() {
     };
 
     checkConnection();
-  }, [setInvoices]);
-
-  // Expose invoice data and tools to AI chatbot
-  useEffect(() => {
-    window.invoiceData = {
-      invoices,
-      tools
-    };
-  }, [invoices]);
+  }, [setInvoices, printInvoiceDetails]);
 
   const handleConnect = async () => {
     try {

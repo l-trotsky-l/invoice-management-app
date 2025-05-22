@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "ai": "^2.2.31",
+    "ai": "^4.3.16",
     "axios": "^1.9.0",
     "crypto": "^1.0.1",
     "intuit-oauth": "^4.2.0",
@@ -19,7 +19,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "recharts": "^2.15.3",
-    "zod": "^3.25.17",
+    "zod": "^3.25.20",
     "zustand": "^5.0.5"
   },
   "devDependencies": {
