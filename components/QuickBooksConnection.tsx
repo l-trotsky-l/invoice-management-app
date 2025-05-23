@@ -142,6 +142,19 @@ export default function QuickBooksConnection() {
 
       const data = await response.json();
       setInvoices(data);
+
+      // Save invoices to file
+      const saveResponse = await fetch('/api/quickbooks/save-invoices', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!saveResponse.ok) {
+        console.error('Failed to save invoices to file');
+      }
     } catch (err) {
       console.error('Error fetching invoices:', err);
       setError('Failed to fetch invoices. Please try again.');

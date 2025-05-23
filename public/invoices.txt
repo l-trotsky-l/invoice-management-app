@@ -1,0 +1,2758 @@
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 145
+Invoice Number: 1038
+Transaction Date: May 20, 2025 at 05:00:00 PM PDT
+Due Date: June 19, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: May 21, 2025 at 11:34:24 AM PDT
+Last Updated: May 21, 2025 at 11:34:33 AM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: John Melton
+Customer ID: 13
+Customer Email: John@Melton.com
+
+Billing Address:
+---------------
+85 Pine St.
+Menlo Park, CA 94304
+Coordinates: 37.4451342, -122.1409626
+
+Shipping Address:
+----------------
+85 Pine St.
+Menlo Park, CA 94304
+Coordinates: 37.4451342, -122.1409626
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Services
+  - Quantity: 1
+  - Unit Price: 250
+  - Amount: 250
+  - Account: Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 250
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 250
+Balance Due: 250
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 130
+Invoice Number: 1037
+Transaction Date: April 23, 2025 at 05:00:00 PM PDT
+Due Date: May 23, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 24, 2025 at 01:16:17 PM PDT
+Last Updated: April 24, 2025 at 01:16:17 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Sonnenschein Family Store
+Customer ID: 24
+Customer Email: Familiystore@intuit.com
+
+Billing Address:
+---------------
+Russ Sonnenschein
+undefined, undefined undefined
+Coordinates: 37.4238562, -122.1141681
+
+Shipping Address:
+----------------
+5647 Cypress Hill Ave.
+Middlefield, CA 94303
+Coordinates: 37.4238562, -122.1141681
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Rock Fountain
+  - Quantity: 1
+  - Unit Price: 275
+  - Amount: 275
+  - Account: Sales of Product Income
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Pump
+  - Quantity: 1
+  - Unit Price: 12.75
+  - Amount: 12.75
+  - Account: Sales of Product Income
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Item 3:
+  - Item Name: Concrete
+  - Quantity: 5
+  - Unit Price: 9.5
+  - Amount: 47.5
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 3
+  - Line ID: 3
+
+Subtotal Line:
+  - Amount: 335.25
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 362.07
+Balance Due: 362.07
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 129
+Invoice Number: 1036
+Transaction Date: April 23, 2025 at 05:00:00 PM PDT
+Due Date: May 23, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 24, 2025 at 01:15:36 PM PDT
+Last Updated: April 24, 2025 at 01:15:36 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: 0969 Ocean View Road
+Customer ID: 8
+Customer Email: Sporting_goods@intuit.com
+
+Billing Address:
+---------------
+Sasha Tillou
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+370 Easy St.
+Middlefield, CA 94482
+Coordinates: 37.4031672, -122.0642815
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Sod
+  - Quantity: 5
+  - Unit Price: 10
+  - Amount: 50
+  - Account: Landscaping Services:Job Materials:Plants and Soil
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Soil
+  - Quantity: 5
+  - Unit Price: 10
+  - Amount: 50
+  - Account: Landscaping Services:Job Materials:Plants and Soil
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Item 3:
+  - Item Name: Gardening
+  - Quantity: 3.5
+  - Unit Price: 25
+  - Amount: 87.5
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 3
+  - Line ID: 3
+
+Item 4:
+  - Item Name: Rock Fountain
+  - Quantity: 1
+  - Unit Price: 275
+  - Amount: 275
+  - Account: Sales of Product Income
+  - Tax Code: [object Object]
+  - Line Number: 4
+  - Line ID: 4
+
+Item 5:
+  - Item Name: Pump
+  - Quantity: 1
+  - Unit Price: 15
+  - Amount: 15
+  - Account: Sales of Product Income
+  - Tax Code: [object Object]
+  - Line Number: 5
+  - Line ID: 5
+
+Subtotal Line:
+  - Amount: 477.5
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 477.5
+Balance Due: 477.5
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 119
+Invoice Number: 1035
+Transaction Date: April 23, 2025 at 05:00:00 PM PDT
+Due Date: May 23, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 24, 2025 at 12:57:24 PM PDT
+Last Updated: April 24, 2025 at 12:57:24 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Mark Cho
+Customer ID: 17
+Customer Email: Mark@Cho.com
+
+Billing Address:
+---------------
+Mark Cho
+undefined, undefined undefined
+Coordinates: 37.3813444, -122.1802812
+
+Shipping Address:
+----------------
+36 Willow Rd
+Menlo Park, CA 94304
+Coordinates: 37.450412, -122.170593
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Rock Fountain
+  - Quantity: 1
+  - Unit Price: 275
+  - Amount: 275
+  - Account: Sales of Product Income
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Sprinkler Pipes
+  - Quantity: 4
+  - Unit Price: 4
+  - Amount: 16
+  - Account: Sales of Product Income
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Subtotal Line:
+  - Amount: 291
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 314.28
+Balance Due: 314.28
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 106
+Invoice Number: 1034
+Transaction Date: April 22, 2025 at 05:00:00 PM PDT
+Due Date: May 22, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 01:45:12 PM PDT
+Last Updated: April 23, 2025 at 01:45:12 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Rondonuwu Fruit and Vegi
+Customer ID: 21
+Customer Email: Tony@Rondonuwu.com
+
+Billing Address:
+---------------
+Rondonuwu Fruit and Vegi
+undefined, undefined undefined
+Coordinates: 37.01, -121.57
+
+Shipping Address:
+----------------
+847 California Ave.
+San Jose, CA 95021
+Coordinates: 37.3313585, -121.911372
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Trimming
+  - Quantity: 2
+  - Unit Price: 15
+  - Amount: 30
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Lighting
+  - Quantity: 3
+  - Unit Price: 15
+  - Amount: 45
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Subtotal Line:
+  - Amount: 75
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 78.6
+Balance Due: 78.6
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 103
+Invoice Number: 1033
+Transaction Date: April 22, 2025 at 05:00:00 PM PDT
+Due Date: May 22, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 01:41:59 PM PDT
+Last Updated: April 23, 2025 at 01:42:08 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Geeta Kalapatapu
+Customer ID: 10
+Customer Email: Geeta@Kalapatapu.com
+
+Billing Address:
+---------------
+Geeta Kalapatapu
+undefined, undefined undefined
+Coordinates: 37.4530553, -122.1178261
+
+Shipping Address:
+----------------
+1987 Main St.
+Middlefield, CA 94303
+Coordinates: 37.445013, -122.1391443
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Rock Fountain
+  - Quantity: 1
+  - Unit Price: 275
+  - Amount: 275
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Design
+  - Quantity: 3.5
+  - Unit Price: 75
+  - Amount: 262.5
+  - Account: Design income
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Item 3:
+  - Item Name: Pump
+  - Quantity: 2
+  - Unit Price: 22.5
+  - Amount: 45
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 3
+  - Line ID: 3
+
+Subtotal Line:
+  - Amount: 582.5
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 629.1
+Balance Due: 629.1
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 69
+Invoice Number: 1023
+Transaction Date: April 21, 2025 at 05:00:00 PM PDT
+Due Date: May 21, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 12:42:59 PM PDT
+Last Updated: April 23, 2025 at 12:42:59 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Red Rock Diner
+Customer ID: 20
+Customer Email: qbwebsamplecompany@yahoo.com
+
+Billing Address:
+---------------
+Stephanie Martini
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+500 Red Rock Rd.
+Bayshore, CA 94326
+Coordinates: INVALID, INVALID
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Pest Control
+  - Quantity: 2
+  - Unit Price: 35
+  - Amount: 70
+  - Account: Pest Control Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 70
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 70
+Balance Due: 70
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 65
+Invoice Number: 1019
+Transaction Date: April 21, 2025 at 05:00:00 PM PDT
+Due Date: May 21, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 22, 2025 at 03:29:27 PM PDT
+Last Updated: April 23, 2025 at 12:18:01 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Sushi by Katsuyuki
+Customer ID: 25
+Customer Email: Sushi@intuit.com
+
+Billing Address:
+---------------
+Katsuyuki Yanagawa
+undefined, undefined undefined
+Coordinates: 40.7312956, -74.2707509
+
+Shipping Address:
+----------------
+898 Elm St.
+Maplewood, NJ 07040
+Coordinates: 40.7312816, -74.2652908
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 4
+  - Unit Price: 20
+  - Amount: 80
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 80
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 80
+Balance Due: 80
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 49
+Invoice Number: 1015
+Transaction Date: April 21, 2025 at 05:00:00 PM PDT
+Due Date: May 21, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 22, 2025 at 11:43:20 AM PDT
+Last Updated: April 22, 2025 at 11:43:20 AM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Paulsen Medical Supplies
+Customer ID: 18
+Customer Email: Medical@intuit.com
+
+Billing Address:
+---------------
+Kathy Paulsen
+undefined, undefined undefined
+Coordinates: 37.4530553, -122.1178261
+
+Shipping Address:
+----------------
+38921 S. Boise Ave
+Middlefield, CA 94304
+Coordinates: 37.3989376, -122.1443935
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Design
+  - Quantity: 4
+  - Unit Price: 75
+  - Amount: 300
+  - Account: Design income
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Installation
+  - Quantity: 5
+  - Unit Price: 50
+  - Amount: 250
+  - Account: Landscaping Services:Labor:Installation
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Item 3:
+  - Item Name: Rock Fountain
+  - Quantity: 1
+  - Unit Price: 275
+  - Amount: 275
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 3
+  - Line ID: 3
+
+Item 4:
+  - Item Name: Rocks
+  - Quantity: 8
+  - Unit Price: 22.5
+  - Amount: 180
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 4
+  - Line ID: 4
+
+Subtotal Line:
+  - Amount: 1005
+  - Line ID: undefined
+
+Other Line (DiscountLineDetail):
+  - Amount: 50.25
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 954.75
+Balance Due: 954.75
+
+Status Information:
+-----------------
+Print Status: NotSet
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 34
+Invoice Number: 1010
+Transaction Date: April 21, 2025 at 05:00:00 PM PDT
+Due Date: May 21, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 22, 2025 at 11:09:08 AM PDT
+Last Updated: April 22, 2025 at 11:09:08 AM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Weiskopf Consulting
+Customer ID: 29
+Customer Email: Consulting@intuit.com
+
+Billing Address:
+---------------
+Nicola Weiskopf
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+45612 Main St.
+Bayshore, CA 94326
+Coordinates: 45.256574, -66.0943698
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Design
+  - Quantity: 5
+  - Unit Price: 75
+  - Amount: 375
+  - Account: Design income
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 375
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 375
+Balance Due: 375
+
+Status Information:
+-----------------
+Print Status: NotSet
+Email Status: NeedToSend
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 99
+Invoice Number: 1032
+Transaction Date: April 20, 2025 at 05:00:00 PM PDT
+Due Date: May 20, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 01:36:31 PM PDT
+Last Updated: April 23, 2025 at 01:36:31 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Travis Waldron
+Customer ID: 26
+Customer Email: Travis@Waldron.com
+
+Billing Address:
+---------------
+Travis Waldron
+undefined, undefined undefined
+Coordinates: 37.3813444, -122.1802812
+
+Shipping Address:
+----------------
+78 First St.
+Monlo Park, CA 94304
+Coordinates: 37.4585825, -122.1352789
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Sod
+  - Quantity: 20
+  - Unit Price: 15
+  - Amount: 300
+  - Account: Landscaping Services:Job Materials:Plants and Soil
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Rocks
+  - Quantity: 7
+  - Unit Price: 12
+  - Amount: 84
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Subtotal Line:
+  - Amount: 384
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 414.72
+Balance Due: 414.72
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 27
+Invoice Number: 1009
+Transaction Date: April 20, 2025 at 05:00:00 PM PDT
+Due Date: May 20, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 21, 2025 at 03:38:07 PM PDT
+Last Updated: April 22, 2025 at 11:17:33 AM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Travis Waldron
+Customer ID: 26
+Customer Email: Travis@Waldron.com
+
+Billing Address:
+---------------
+Travis Waldron
+undefined, undefined undefined
+Coordinates: 37.3813444, -122.1802812
+
+Shipping Address:
+----------------
+78 First St.
+Monlo Park, CA 94304
+Coordinates: 37.4585825, -122.1352789
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Services
+  - Quantity: undefined
+  - Unit Price: undefined
+  - Amount: 103.55
+  - Account: Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 103.55
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 103.55
+Balance Due: 0
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 9
+Invoice Number: 1001
+Transaction Date: April 20, 2025 at 05:00:00 PM PDT
+Due Date: May 20, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 21, 2025 at 02:49:30 PM PDT
+Last Updated: April 23, 2025 at 01:25:20 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Amy's Bird Sanctuary
+Customer ID: 1
+Customer Email: Birds@Intuit.com
+
+Billing Address:
+---------------
+Amy Lauterbach
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+4581 Finch St.
+Bayshore, CA 94326
+Coordinates: INVALID, INVALID
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 4
+  - Unit Price: 25
+  - Amount: 100
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 100
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 108
+Balance Due: 0
+
+Status Information:
+-----------------
+Print Status: NotSet
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 13
+Invoice Number: 1005
+Transaction Date: April 14, 2025 at 05:00:00 PM PDT
+Due Date: May 14, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 21, 2025 at 03:05:48 PM PDT
+Last Updated: April 23, 2025 at 01:23:52 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: 55 Twin Lane
+Customer ID: 9
+Customer Email: Sporting_goods@intuit.com
+
+Billing Address:
+---------------
+Amelia
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+370 Easy St.
+Middlefield, CA 94482
+Coordinates: 37.4031672, -122.0642815
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 2
+  - Unit Price: 25
+  - Amount: 50
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 50
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 54
+Balance Due: 4
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 42
+Invoice Number: 1013
+Transaction Date: April 11, 2025 at 05:00:00 PM PDT
+Due Date: May 11, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 22, 2025 at 11:24:29 AM PDT
+Last Updated: April 23, 2025 at 01:35:42 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Travis Waldron
+Customer ID: 26
+Customer Email: Travis@Waldron.com
+
+Billing Address:
+---------------
+Travis Waldron
+undefined, undefined undefined
+Coordinates: 37.3813444, -122.1802812
+
+Shipping Address:
+----------------
+78 First St.
+Monlo Park, CA 94304
+Coordinates: 37.4585825, -122.1352789
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Subtotal Line:
+  - Amount: 75
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 81
+Balance Due: 0
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 12
+Invoice Number: 1004
+Transaction Date: April 11, 2025 at 05:00:00 PM PDT
+Due Date: May 11, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 21, 2025 at 03:04:04 PM PDT
+Last Updated: April 24, 2025 at 12:59:21 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Cool Cars
+Customer ID: 3
+Customer Email: Cool_Cars@intuit.com
+
+Billing Address:
+---------------
+Grace Pariente
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+Not provided
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Sprinkler Heads
+  - Quantity: 10
+  - Unit Price: 2
+  - Amount: 20
+  - Account: Sales of Product Income
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Sprinkler Pipes
+  - Quantity: 6
+  - Unit Price: 4
+  - Amount: 24
+  - Account: Sales of Product Income
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Item 3:
+  - Item Name: Sod
+  - Quantity: 50
+  - Unit Price: 35
+  - Amount: 1750
+  - Account: Landscaping Services:Job Materials:Plants and Soil
+  - Tax Code: [object Object]
+  - Line Number: 3
+  - Line ID: 3
+
+Item 4:
+  - Item Name: Services
+  - Quantity: 8
+  - Unit Price: 50
+  - Amount: 400
+  - Account: Services
+  - Tax Code: [object Object]
+  - Line Number: 4
+  - Line ID: 4
+
+Subtotal Line:
+  - Amount: 2194
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 2369.52
+Balance Due: 0
+
+Status Information:
+-----------------
+Print Status: NotSet
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: No
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 39
+Invoice Number: 1012
+Transaction Date: April 9, 2025 at 05:00:00 PM PDT
+Due Date: May 9, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 22, 2025 at 11:16:52 AM PDT
+Last Updated: April 22, 2025 at 11:16:52 AM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Barnett Design
+Customer ID: 23
+Customer Email: Design@intuit.com
+
+Billing Address:
+---------------
+Shara Barnett
+undefined, undefined undefined
+Coordinates: 37.4530553, -122.1178261
+
+Shipping Address:
+----------------
+19 Main St.
+Middlefield, CA 94303
+Coordinates: 37.445013, -122.1391443
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Sprinkler Heads
+  - Quantity: 15
+  - Unit Price: 2
+  - Amount: 30
+  - Account: Landscaping Services:Job Materials:Sprinklers and Drip Systems
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Rock Fountain
+  - Quantity: 1
+  - Unit Price: 275
+  - Amount: 275
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Subtotal Line:
+  - Amount: 305
+  - Line ID: undefined
+
+Other Line (DiscountLineDetail):
+  - Amount: 30.5
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 274.5
+Balance Due: 274.5
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NeedToSend
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 63
+Invoice Number: 1017
+Transaction Date: April 7, 2025 at 05:00:00 PM PDT
+Due Date: May 7, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 22, 2025 at 03:28:08 PM PDT
+Last Updated: April 24, 2025 at 12:52:44 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Sushi by Katsuyuki
+Customer ID: 25
+Customer Email: Sushi@intuit.com
+
+Billing Address:
+---------------
+Katsuyuki Yanagawa
+undefined, undefined undefined
+Coordinates: 40.7312956, -74.2707509
+
+Shipping Address:
+----------------
+898 Elm St.
+Maplewood, NJ 07040
+Coordinates: 40.7312816, -74.2652908
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 4
+  - Unit Price: 20
+  - Amount: 80
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 80
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 80
+Balance Due: 0
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 68
+Invoice Number: 1022
+Transaction Date: April 1, 2025 at 05:00:00 PM PDT
+Due Date: May 1, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 12:41:24 PM PDT
+Last Updated: April 23, 2025 at 01:25:43 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Jeff's Jalopies
+Customer ID: 12
+Customer Email: Jalopies@intuit.com
+
+Billing Address:
+---------------
+Jeff Chin
+undefined, undefined undefined
+Coordinates: 37.4135757, -122.1689284
+
+Shipping Address:
+----------------
+12 Willow Rd.
+Menlo Park, CA 94305
+Coordinates: 37.4495308, -122.1726923
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 3
+  - Unit Price: 25
+  - Amount: 75
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 75
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 81
+Balance Due: 81
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 67
+Invoice Number: 1021
+Transaction Date: April 1, 2025 at 05:00:00 PM PDT
+Due Date: May 1, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 12:40:06 PM PDT
+Last Updated: April 23, 2025 at 01:39:32 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Amy's Bird Sanctuary
+Customer ID: 1
+Customer Email: Birds@Intuit.com
+
+Billing Address:
+---------------
+Amy Lauterbach
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+4581 Finch St.
+Bayshore, CA 94326
+Coordinates: INVALID, INVALID
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Soil
+  - Quantity: 15
+  - Unit Price: 10
+  - Amount: 150
+  - Account: Landscaping Services:Job Materials:Plants and Soil
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Rock Fountain
+  - Quantity: 1
+  - Unit Price: 275
+  - Amount: 275
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Subtotal Line:
+  - Amount: 425
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 459
+Balance Due: 239
+
+Status Information:
+-----------------
+Print Status: NotSet
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 16
+Invoice Number: 1007
+Transaction Date: March 29, 2025 at 05:00:00 PM PDT
+Due Date: April 28, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 21, 2025 at 03:10:40 PM PDT
+Last Updated: April 22, 2025 at 11:06:49 AM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: John Melton
+Customer ID: 13
+Customer Email: John@Melton.com
+
+Billing Address:
+---------------
+John Melton
+undefined, undefined undefined
+Coordinates: 37.3813444, -122.1802812
+
+Shipping Address:
+----------------
+85 Pine St.
+Menlo Park, CA 94304
+Coordinates: 37.4451342, -122.1409626
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Design
+  - Quantity: 10
+  - Unit Price: 75
+  - Amount: 750
+  - Account: Design income
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 750
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 750
+Balance Due: 450
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 14
+Invoice Number: 1006
+Transaction Date: March 15, 2025 at 05:00:00 PM PDT
+Due Date: April 14, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 21, 2025 at 03:06:59 PM PDT
+Last Updated: April 23, 2025 at 01:23:11 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: 55 Twin Lane
+Customer ID: 9
+Customer Email: Sporting_goods@intuit.com
+
+Billing Address:
+---------------
+Amelia
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+370 Easy St.
+Middlefield, CA 94482
+Coordinates: 37.4031672, -122.0642815
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 4
+  - Unit Price: 20
+  - Amount: 80
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 80
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 86.4
+Balance Due: 0
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 93
+Invoice Number: 1029
+Transaction Date: March 6, 2025 at 04:00:00 PM PST
+Due Date: April 5, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 01:27:49 PM PDT
+Last Updated: April 23, 2025 at 01:28:29 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Dukes Basketball Camp
+Customer ID: 5
+Customer Email: Dukes_bball@intuit.com
+
+Billing Address:
+---------------
+Peter Dukes
+undefined, undefined undefined
+Coordinates: 32.2546522, -110.9447027
+
+Shipping Address:
+----------------
+25 Court St.
+Tucson, AZ 85719
+Coordinates: 32.2841116, -110.9744298
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Concrete
+  - Quantity: 5
+  - Unit Price: 15
+  - Amount: 75
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Rocks
+  - Quantity: 6
+  - Unit Price: 12
+  - Amount: 72
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Item 3:
+  - Item Name: Rock Fountain
+  - Quantity: 1
+  - Unit Price: 275
+  - Amount: 275
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 3
+  - Line ID: 3
+
+Subtotal Line:
+  - Amount: 422
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 460.4
+Balance Due: 0
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 92
+Invoice Number: 1028
+Transaction Date: March 6, 2025 at 04:00:00 PM PST
+Due Date: April 5, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 01:22:13 PM PDT
+Last Updated: April 23, 2025 at 01:22:27 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: 55 Twin Lane
+Customer ID: 9
+Customer Email: Sporting_goods@intuit.com
+
+Billing Address:
+---------------
+Amelia
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+370 Easy St.
+Middlefield, CA 94482
+Coordinates: 37.4031672, -122.0642815
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 3
+  - Unit Price: 25
+  - Amount: 75
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 75
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 81
+Balance Due: 81
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 75
+Invoice Number: 1027
+Transaction Date: March 6, 2025 at 04:00:00 PM PST
+Due Date: April 5, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 12:54:08 PM PDT
+Last Updated: April 23, 2025 at 12:54:08 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Bill's Windsurf Shop
+Customer ID: 2
+Customer Email: Surf@Intuit.com
+
+Billing Address:
+---------------
+Bill Lucchini
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+Not provided
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 2
+  - Unit Price: 25
+  - Amount: 50
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Pest Control
+  - Quantity: 1
+  - Unit Price: 35
+  - Amount: 35
+  - Account: Pest Control Services
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Subtotal Line:
+  - Amount: 85
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 85
+Balance Due: 85
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: No
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 60
+Invoice Number: 1016
+Transaction Date: March 5, 2025 at 04:00:00 PM PST
+Due Date: April 4, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 22, 2025 at 03:18:18 PM PDT
+Last Updated: April 22, 2025 at 03:18:18 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Kookies by Kathy
+Customer ID: 16
+Customer Email: qbwebsamplecompany@yahoo.com
+
+Billing Address:
+---------------
+Kathy Kuplis
+undefined, undefined undefined
+Coordinates: 37.4530553, -122.1178261
+
+Shipping Address:
+----------------
+Not provided
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 3
+  - Unit Price: 25
+  - Amount: 75
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Subtotal Line:
+  - Amount: 75
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 75
+Balance Due: 75
+
+Status Information:
+-----------------
+Print Status: NotSet
+Email Status: NeedToSend
+
+Additional Settings:
+------------------
+Free Form Address: No
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 70
+Invoice Number: 1024
+Transaction Date: February 13, 2025 at 04:00:00 PM PST
+Due Date: March 15, 2025 at 05:00:00 PM PDT
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 12:44:45 PM PDT
+Last Updated: April 23, 2025 at 12:44:45 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Red Rock Diner
+Customer ID: 20
+Customer Email: qbwebsamplecompany@yahoo.com
+
+Billing Address:
+---------------
+Stephanie Martini
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+500 Red Rock Rd.
+Bayshore, CA 94326
+Coordinates: INVALID, INVALID
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Sprinkler Pipes
+  - Quantity: 12
+  - Unit Price: 4
+  - Amount: 48
+  - Account: Landscaping Services:Job Materials:Sprinklers and Drip Systems
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Sprinkler Pipes
+  - Quantity: 15
+  - Unit Price: 4
+  - Amount: 60
+  - Account: Landscaping Services:Job Materials:Sprinklers and Drip Systems
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Item 3:
+  - Item Name: Rocks
+  - Quantity: 4
+  - Unit Price: 12
+  - Amount: 48
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 3
+  - Line ID: 3
+
+Subtotal Line:
+  - Amount: 156
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 156
+Balance Due: 156
+
+Status Information:
+-----------------
+Print Status: NotSet
+Email Status: NeedToSend
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 96
+Invoice Number: 1031
+Transaction Date: February 6, 2025 at 04:00:00 PM PST
+Due Date: March 8, 2025 at 04:00:00 PM PST
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 01:30:49 PM PDT
+Last Updated: April 24, 2025 at 01:13:33 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: 0969 Ocean View Road
+Customer ID: 8
+Customer Email: Sporting_goods@intuit.com
+
+Billing Address:
+---------------
+Sasha Tillou
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+370 Easy St.
+Middlefield, CA 94482
+Coordinates: 37.4031672, -122.0642815
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 3
+  - Unit Price: 30
+  - Amount: 90
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Rock Fountain
+  - Quantity: 1
+  - Unit Price: 275
+  - Amount: 275
+  - Account: Landscaping Services:Job Materials:Fountains and Garden Lighting
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Subtotal Line:
+  - Amount: 365
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 387
+Balance Due: 0
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 95
+Invoice Number: 1030
+Transaction Date: January 6, 2025 at 04:00:00 PM PST
+Due Date: February 5, 2025 at 04:00:00 PM PST
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 23, 2025 at 01:29:56 PM PDT
+Last Updated: April 23, 2025 at 01:31:45 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: 0969 Ocean View Road
+Customer ID: 8
+Customer Email: Sporting_goods@intuit.com
+
+Billing Address:
+---------------
+Sasha Tillou
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+370 Easy St.
+Middlefield, CA 94482
+Coordinates: 37.4031672, -122.0642815
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 2
+  - Unit Price: 25
+  - Amount: 50
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Pest Control
+  - Quantity: 1
+  - Unit Price: 35
+  - Amount: 35
+  - Account: Pest Control Services
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Item 3:
+  - Item Name: Sod
+  - Quantity: 15
+  - Unit Price: 8.75
+  - Amount: 131.25
+  - Account: Landscaping Services:Job Materials:Plants and Soil
+  - Tax Code: [object Object]
+  - Line Number: 3
+  - Line ID: 3
+
+Subtotal Line:
+  - Amount: 216.25
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 226.75
+Balance Due: 0
+
+Status Information:
+-----------------
+Print Status: NeedToPrint
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: Yes
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
+
+
+
+===========================================
+INVOICE DETAILS
+===========================================
+Basic Information:
+-----------------
+Invoice ID: 10
+Invoice Number: 1002
+Transaction Date: January 6, 2025 at 04:00:00 PM PST
+Due Date: February 5, 2025 at 04:00:00 PM PST
+Currency: United States Dollar (USD)
+
+Metadata:
+---------
+Created: April 21, 2025 at 02:57:16 PM PDT
+Last Updated: April 23, 2025 at 12:56:01 PM PDT
+Last Modified By: [object Object]
+
+Customer Information:
+-------------------
+Customer Name: Bill's Windsurf Shop
+Customer ID: 2
+Customer Email: Surf@Intuit.com
+
+Billing Address:
+---------------
+Bill Lucchini
+undefined, undefined undefined
+Coordinates: INVALID, INVALID
+
+Shipping Address:
+----------------
+Not provided
+
+Payment Terms:
+-------------
+Terms: Net 30 (ID: 3)
+
+Line Items:
+----------
+Item 1:
+  - Item Name: Gardening
+  - Quantity: 4
+  - Unit Price: 35
+  - Amount: 140
+  - Account: Landscaping Services
+  - Tax Code: [object Object]
+  - Line Number: 1
+  - Line ID: 1
+
+Item 2:
+  - Item Name: Pest Control
+  - Quantity: 1
+  - Unit Price: 35
+  - Amount: 35
+  - Account: Pest Control Services
+  - Tax Code: [object Object]
+  - Line Number: 2
+  - Line ID: 2
+
+Subtotal Line:
+  - Amount: 175
+  - Line ID: undefined
+
+Financial Summary:
+----------------
+Total Amount: 175
+Balance Due: 0
+
+Status Information:
+-----------------
+Print Status: NotSet
+Email Status: NotSet
+
+Additional Settings:
+------------------
+Free Form Address: No
+Apply Tax After Discount: No
+Allow IPN Payment: No
+Allow Online Payment: No
+Allow Online Credit Card Payment: No
+Allow Online ACH Payment: No
+
+
+Customer Memo:
+-------------
+Thank you for your business and have a great day!
+
+===========================================
