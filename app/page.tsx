@@ -1,4 +1,5 @@
-import AIChat from '../components/AIChat';
+// import AIChat from '../components/AIChat';
+import AIChat from '@/components/AIChat';
 import QuickBooksConnection from '../components/QuickBooksConnection';
 
 export default function Home() {
