@@ -5,19 +5,6 @@ import { Send } from 'lucide-react';
 
 export default function AIChat() {
   useEffect(() => {
-    // Initialize chat when component mounts
-    const messagesContainer = document.getElementById('messages-container');
-    if (messagesContainer && messagesContainer.children.length === 0) {
-      const systemMessage = document.createElement('div');
-      systemMessage.className = 'flex justify-start';
-      systemMessage.innerHTML = `
-        <div class="max-w-[80%] rounded-lg p-3 bg-gray-700 text-white">
-          <p class="text-sm whitespace-pre-wrap">You are a helpful AI assistant for an invoice management application. How can I help you today?</p>
-        </div>
-      `;
-      messagesContainer.appendChild(systemMessage);
-    }
-
     // Add submit handler
     const form = document.getElementById('chat-form');
     const input = document.getElementById('chat-input') as HTMLInputElement;

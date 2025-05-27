@@ -16,6 +16,9 @@ interface Invoice {
   Balance: number;
   Deposit?: number;
   customerName?: string;
+  MetaData?: {
+    LastUpdatedTime?: string;
+  };
 }
 
 interface CustomerInvoicesResponse {
@@ -101,6 +104,42 @@ interface ComplexInvoiceResponse {
 interface Customer {
   Id: string;
   DisplayName: string;
+}
+
+interface InvoiceAnalysisResponse {
+  message?: string;
+  error?: string;
+  customerName: string;
+  analysis: {
+    totalInvoices: number;
+    totalAmount: number;
+    paidInvoices: number;
+    overdueInvoices: number;
+    depositedInvoices: number;
+    averagePaymentTime?: number;
+    paymentTrend: 'Improving' | 'Declining' | 'Stable';
+    recentStatus: string;
+  };
+  steps: Array<{
+    step: number;
+    description: string;
+    status: 'completed' | 'failed' | 'skipped';
+    details?: string;
+  }>;
+}
+
+interface InvestigationStep {
+  role: 'user' | 'assistant' | 'tool';
+  content: string;
+  toolName?: string;
+  toolResult?: string;
+}
+
+interface InvoiceInvestigationResponse {
+  message?: string;
+  error?: string;
+  steps: InvestigationStep[];
+  conclusion: string;
 }
 
 // Tool to count invoices from QuickBooks API
@@ -717,6 +756,442 @@ const getComplexInvoicesTool = tool({
   },
 });
 
+// Tool for multi-step invoice analysis
+const analyzeCustomerInvoicesTool = tool({
+  description: "Perform a detailed analysis of a customer's invoice history with step-by-step logging",
+  parameters: z.object({
+    customerName: z.string().describe("The name of the customer to analyze"),
+    maxSteps: z.number().min(1).max(5).describe("Maximum number of analysis steps to perform")
+  }),
+  execute: async ({ customerName, maxSteps }): Promise<string> => {
+    const steps: Array<{ step: number; description: string; status: 'completed' | 'failed' | 'skipped'; details?: string }> = [];
+    let currentStep = 0;
+
+    const logStep = (description: string, status: 'completed' | 'failed' | 'skipped', details?: string) => {
+      currentStep++;
+      if (currentStep <= maxSteps) {
+        const step = { step: currentStep, description, status, details };
+        steps.push(step);
+        console.log(`\nStep ${currentStep}/${maxSteps}: ${description}`);
+        console.log(`Status: ${status}`);
+        if (details) console.log(`Details: ${details}`);
+        console.log('----------------------------------------');
+      }
+    };
+
+    try {
+      // Step 1: Authentication Check
+      logStep('Checking authentication', 'completed', 'Verifying QuickBooks access');
+      const cookieStore = await cookies();
+      const accessToken = cookieStore.get('qb_access_token')?.value;
+      const realmId = cookieStore.get('qb_realm_id')?.value;
+
+      if (!accessToken || !realmId) {
+        logStep('Authentication check', 'failed', 'QuickBooks connection not authenticated');
+        return JSON.stringify({
+          error: 'Sorry, I cannot access the invoices because the QuickBooks connection is not authenticated.',
+          customerName,
+          analysis: {
+            totalInvoices: 0,
+            totalAmount: 0,
+            paidInvoices: 0,
+            overdueInvoices: 0,
+            depositedInvoices: 0,
+            paymentTrend: 'Stable',
+            recentStatus: 'N/A'
+          },
+          steps
+        } as InvoiceAnalysisResponse);
+      }
+
+      // Step 2: Find Customer
+      logStep('Finding customer', 'completed', `Searching for customer: ${customerName}`);
+      const customerResponse = await fetch(`https://sandbox-quickbooks.api.intuit.com/v3/company/${realmId}/query`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Accept': 'application/json',
+          'Content-Type': 'application/text'
+        },
+        body: `SELECT * FROM Customer WHERE DisplayName = '${customerName}'`
+      });
+
+      if (!customerResponse.ok) {
+        logStep('Customer search', 'failed', 'Error finding customer');
+        return JSON.stringify({
+          error: 'Error finding customer',
+          customerName,
+          analysis: {
+            totalInvoices: 0,
+            totalAmount: 0,
+            paidInvoices: 0,
+            overdueInvoices: 0,
+            depositedInvoices: 0,
+            paymentTrend: 'Stable',
+            recentStatus: 'N/A'
+          },
+          steps
+        } as InvoiceAnalysisResponse);
+      }
+
+      const customerData = await customerResponse.json();
+      const customers = customerData.QueryResponse?.Customer || [];
+
+      if (customers.length === 0) {
+        logStep('Customer search', 'failed', `No customer found with name: ${customerName}`);
+        return JSON.stringify({
+          error: `No customer found with name "${customerName}"`,
+          customerName,
+          analysis: {
+            totalInvoices: 0,
+            totalAmount: 0,
+            paidInvoices: 0,
+            overdueInvoices: 0,
+            depositedInvoices: 0,
+            paymentTrend: 'Stable',
+            recentStatus: 'N/A'
+          },
+          steps
+        } as InvoiceAnalysisResponse);
+      }
+
+      // Step 3: Fetch Invoices
+      logStep('Fetching invoices', 'completed', 'Retrieving customer invoices');
+      const customer = customers[0];
+      const invoiceResponse = await fetch(`https://sandbox-quickbooks.api.intuit.com/v3/company/${realmId}/query`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Accept': 'application/json',
+          'Content-Type': 'application/text'
+        },
+        body: `SELECT * FROM Invoice WHERE CustomerRef = '${customer.Id}' ORDER BY TxnDate DESC`
+      });
+
+      if (!invoiceResponse.ok) {
+        logStep('Invoice fetch', 'failed', 'Error fetching invoices');
+        return JSON.stringify({
+          error: 'Error fetching invoices',
+          customerName,
+          analysis: {
+            totalInvoices: 0,
+            totalAmount: 0,
+            paidInvoices: 0,
+            overdueInvoices: 0,
+            depositedInvoices: 0,
+            paymentTrend: 'Stable',
+            recentStatus: 'N/A'
+          },
+          steps
+        } as InvoiceAnalysisResponse);
+      }
+
+      const invoiceData = await invoiceResponse.json();
+      const invoices = invoiceData.QueryResponse?.Invoice || [];
+
+      // Step 4: Analyze Invoices
+      if (currentStep < maxSteps) {
+        logStep('Analyzing invoices', 'completed', `Processing ${invoices.length} invoices`);
+        
+        const analysis: {
+          totalInvoices: number;
+          totalAmount: number;
+          paidInvoices: number;
+          overdueInvoices: number;
+          depositedInvoices: number;
+          averagePaymentTime?: number;
+          paymentTrend: 'Improving' | 'Declining' | 'Stable';
+          recentStatus: string;
+        } = {
+          totalInvoices: invoices.length,
+          totalAmount: invoices.reduce((sum: number, inv: Invoice) => sum + inv.TotalAmt, 0),
+          paidInvoices: invoices.filter((inv: Invoice) => inv.Balance === 0).length,
+          overdueInvoices: invoices.filter((inv: Invoice) => 
+            inv.Balance > 0 && inv.DueDate && new Date(inv.DueDate) < new Date()
+          ).length,
+          depositedInvoices: invoices.filter((inv: Invoice) => inv.Deposit === 1).length,
+          paymentTrend: 'Stable',
+          recentStatus: 'N/A'
+        };
+
+        // Calculate payment trend based on last 3 invoices
+        if (invoices.length >= 3) {
+          const recentInvoices = invoices.slice(0, 3);
+          const paidCount = recentInvoices.filter((inv: Invoice) => inv.Balance === 0).length;
+          analysis.paymentTrend = paidCount === 3 ? 'Improving' : 
+                                paidCount === 0 ? 'Declining' : 'Stable';
+          analysis.recentStatus = `Last 3 invoices: ${paidCount} paid`;
+        }
+
+        // Step 5: Calculate Average Payment Time (if we have enough steps)
+        if (currentStep < maxSteps) {
+          logStep('Calculating payment metrics', 'completed', 'Computing average payment time');
+          
+          const paidInvoices = invoices.filter((inv: Invoice) => inv.Balance === 0);
+          if (paidInvoices.length > 0) {
+            const totalDays = paidInvoices.reduce((sum: number, inv: Invoice) => {
+              const invoiceDate = new Date(inv.TxnDate);
+              const paidDate = new Date(inv.MetaData?.LastUpdatedTime || inv.TxnDate);
+              return sum + Math.floor((paidDate.getTime() - invoiceDate.getTime()) / (1000 * 60 * 60 * 24));
+            }, 0);
+            analysis.averagePaymentTime = Math.round(totalDays / paidInvoices.length);
+          }
+        } else {
+          logStep('Calculating payment metrics', 'skipped', 'Step limit reached');
+        }
+
+        return JSON.stringify({
+          message: `Analysis completed for ${customerName}`,
+          customerName,
+          analysis,
+          steps
+        } as InvoiceAnalysisResponse);
+      } else {
+        logStep('Invoice analysis', 'skipped', 'Step limit reached');
+        return JSON.stringify({
+          error: 'Analysis incomplete due to step limit',
+          customerName,
+          analysis: {
+            totalInvoices: invoices.length,
+            totalAmount: invoices.reduce((sum: number, inv: Invoice) => sum + inv.TotalAmt, 0),
+            paidInvoices: 0,
+            overdueInvoices: 0,
+            depositedInvoices: 0,
+            paymentTrend: 'Stable',
+            recentStatus: 'N/A'
+          },
+          steps
+        } as InvoiceAnalysisResponse);
+      }
+    } catch (error) {
+      console.error('Error in invoice analysis:', error);
+      logStep('Error handling', 'failed', 'Unexpected error occurred');
+      return JSON.stringify({
+        error: 'Sorry, I encountered an error while analyzing the invoices.',
+        customerName,
+        analysis: {
+          totalInvoices: 0,
+          totalAmount: 0,
+          paidInvoices: 0,
+          overdueInvoices: 0,
+          depositedInvoices: 0,
+          paymentTrend: 'Stable',
+          recentStatus: 'N/A'
+        },
+        steps
+      } as InvoiceAnalysisResponse);
+    }
+  },
+});
+
+// Tool for multi-step invoice investigation
+const investigateInvoicesTool = tool({
+  description: "Perform a multi-step investigation of invoices with LLM-guided analysis",
+  parameters: z.object({
+    query: z.string().describe("The initial query or observation to investigate"),
+    maxSteps: z.number().min(1).max(5).describe("Maximum number of investigation steps")
+  }),
+  execute: async ({ query, maxSteps }): Promise<string> => {
+    const steps: InvestigationStep[] = [];
+
+    const addStep = (step: InvestigationStep) => {
+      steps.push(step);
+      console.log(`\nStep ${steps.length}/${maxSteps}:`);
+      console.log(`Role: ${step.role}`);
+      if (step.toolName) console.log(`Tool: ${step.toolName}`);
+      console.log(`Content: ${step.content}`);
+      if (step.toolResult) console.log(`Tool Result: ${step.toolResult}`);
+      console.log('----------------------------------------');
+    };
+
+    try {
+      // Initial user query
+      addStep({ role: 'user', content: query });
+
+      // Step 1: LLM analyzes the query and decides first action
+      const initialAnalysis = await generateText({
+        model: openai('gpt-4'),
+        system: `You are an invoice investigation assistant. Analyze the user's query and decide the first step of investigation.
+                Available tools: countInvoicesTool, getCustomerInvoicesTool, getInvoiceDetailsTool, getTimeOrderedInvoicesTool, getInvoicesByStatusTool.
+                Respond with a JSON object containing:
+                {
+                  "thought": "Your reasoning about the query",
+                  "action": "Which tool to use",
+                  "parameters": {tool specific parameters}
+                }`,
+        prompt: `Analyze this query and determine the first investigation step: ${query}`
+      });
+
+      addStep({ 
+        role: 'assistant', 
+        content: `Initial analysis: ${initialAnalysis.text}` 
+      });
+
+      // Parse LLM's decision
+      const decision = JSON.parse(initialAnalysis.text);
+      addStep({ 
+        role: 'tool', 
+        content: `Decided to use ${decision.action}`,
+        toolName: decision.action
+      });
+
+      // Step 2: Execute the first tool
+      let toolResult;
+      switch (decision.action) {
+        case 'countInvoicesTool':
+          toolResult = await countInvoicesTool.execute({});
+          break;
+        case 'getCustomerInvoicesTool':
+          toolResult = await getCustomerInvoicesTool.execute({ customerName: decision.parameters.customerName });
+          break;
+        case 'getInvoiceDetailsTool':
+          toolResult = await getInvoiceDetailsTool.execute({ invoiceNumber: decision.parameters.invoiceNumber });
+          break;
+        case 'getTimeOrderedInvoicesTool':
+          toolResult = await getTimeOrderedInvoicesTool.execute(decision.parameters);
+          break;
+        case 'getInvoicesByStatusTool':
+          toolResult = await getInvoicesByStatusTool.execute({ status: decision.parameters.status });
+          break;
+        default:
+          throw new Error(`Unknown tool: ${decision.action}`);
+      }
+
+      addStep({ 
+        role: 'tool', 
+        content: 'Tool execution completed',
+        toolName: decision.action,
+        toolResult: toolResult
+      });
+
+      // Step 3: LLM analyzes the tool result and decides next action
+      const resultAnalysis = await generateText({
+        model: openai('gpt-4'),
+        system: `You are an invoice investigation assistant. Analyze the invoice data and provide a clear, structured analysis.
+                Focus on payment patterns, amounts, and status.
+                Your response MUST be a JSON object in this format:
+                {
+                  "thought": "Your analysis of the payment patterns",
+                  "conclusion": "A clear summary of findings",
+                  "details": {
+                    "totalInvoices": number,
+                    "totalAmount": number,
+                    "paidAmount": number,
+                    "outstandingAmount": number,
+                    "paymentStatus": "Good/Fair/Poor",
+                    "paymentTrend": "Improving/Stable/Declining",
+                    "averagePaymentTime": number,
+                    "recentActivity": "Description of recent payment behavior"
+                  }
+                }`,
+        prompt: `Analyze this invoice data for payment patterns and provide a clear summary: ${JSON.stringify(toolResult)}`
+      });
+
+      // Parse and format the conclusion
+      let conclusion;
+      try {
+        const jsonMatch = resultAnalysis.text.match(/\{[\s\S]*\}/);
+        if (jsonMatch) {
+          conclusion = JSON.parse(jsonMatch[0]);
+        } else {
+          // If no JSON found, analyze the raw data
+          const data = JSON.parse(toolResult);
+          const invoices = data.invoices || [];
+          const totalAmount = invoices.reduce((sum: number, inv: Invoice) => sum + inv.TotalAmt, 0);
+          const paidAmount = invoices.reduce((sum: number, inv: Invoice) => sum + (inv.TotalAmt - inv.Balance), 0);
+          const outstandingAmount = invoices.reduce((sum: number, inv: Invoice) => sum + inv.Balance, 0);
+          
+          conclusion = {
+            thought: "Analyzing payment patterns from invoice data",
+            conclusion: `Found ${invoices.length} invoices with total amount of $${totalAmount.toFixed(2)}`,
+            details: {
+              totalInvoices: invoices.length,
+              totalAmount,
+              paidAmount,
+              outstandingAmount,
+              paymentStatus: outstandingAmount === 0 ? "Good" : outstandingAmount < totalAmount * 0.5 ? "Fair" : "Poor",
+              paymentTrend: "Stable",
+              recentActivity: "Based on available invoice data"
+            }
+          };
+        }
+      } catch (error) {
+        console.error(`Error parsing LLM response: ${resultAnalysis.text}`);
+        conclusion = {
+          thought: "Error analyzing payment data",
+          conclusion: "Unable to provide detailed analysis",
+          details: {
+            totalInvoices: 0,
+            totalAmount: 0,
+            paidAmount: 0,
+            outstandingAmount: 0,
+            paymentStatus: "Unknown",
+            paymentTrend: "Unknown",
+            recentActivity: "Analysis failed"
+          }
+        };
+      }
+
+      // Format the final response
+      const formattedResponse = {
+        role: 'assistant',
+        content: `Payment History Analysis for John Melton:\n\n` +
+                `Total Invoices: ${conclusion.details.totalInvoices}\n` +
+                `Total Amount: $${conclusion.details.totalAmount.toFixed(2)}\n` +
+                `Paid Amount: $${conclusion.details.paidAmount.toFixed(2)}\n` +
+                `Outstanding Amount: $${conclusion.details.outstandingAmount.toFixed(2)}\n` +
+                `Payment Status: ${conclusion.details.paymentStatus}\n` +
+                `Payment Trend: ${conclusion.details.paymentTrend}\n` +
+                `Recent Activity: ${conclusion.details.recentActivity}\n\n` +
+                `Detailed Invoice List:\n` +
+                JSON.parse(toolResult).invoices.map((inv: Invoice) => 
+                  `Invoice #${inv.DocNumber}\n` +
+                  `Date: ${new Date(inv.TxnDate).toLocaleDateString()}\n` +
+                  `Amount: $${inv.TotalAmt.toFixed(2)}\n` +
+                  `Balance: $${inv.Balance.toFixed(2)}\n` +
+                  `Status: ${inv.Balance === 0 ? 'Paid' : inv.Balance < inv.TotalAmt ? 'Partially Paid' : 'Unpaid'}\n` +
+                  `Due Date: ${inv.DueDate ? new Date(inv.DueDate).toLocaleDateString() : 'Not specified'}\n`
+                ).join('\n'),
+        structuredData: {
+          summary: {
+            totalInvoices: conclusion.details.totalInvoices,
+            totalAmount: conclusion.details.totalAmount,
+            paidAmount: conclusion.details.paidAmount,
+            outstandingAmount: conclusion.details.outstandingAmount,
+            paymentStatus: conclusion.details.paymentStatus,
+            paymentTrend: conclusion.details.paymentTrend,
+            recentActivity: conclusion.details.recentActivity
+          },
+          invoices: JSON.parse(toolResult).invoices.map((inv: Invoice) => ({
+            invoiceNumber: inv.DocNumber,
+            date: new Date(inv.TxnDate).toLocaleDateString(),
+            amount: inv.TotalAmt,
+            balance: inv.Balance,
+            status: inv.Balance === 0 ? 'Paid' : inv.Balance < inv.TotalAmt ? 'Partially Paid' : 'Unpaid',
+            dueDate: inv.DueDate ? new Date(inv.DueDate).toLocaleDateString() : 'Not specified'
+          }))
+        }
+      };
+
+      return JSON.stringify(formattedResponse);
+
+    } catch (error: unknown) {
+      console.error('Error in invoice investigation:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      addStep({ 
+        role: 'assistant', 
+        content: `Error occurred: ${errorMessage}` 
+      });
+      
+      return JSON.stringify({
+        error: 'Sorry, I encountered an error during the investigation.',
+        steps,
+        conclusion: 'Investigation failed due to an error'
+      } as InvoiceInvestigationResponse);
+    }
+  },
+});
+
 export async function POST(req: Request) {
   try {
     const { messages } = await req.json();
@@ -999,6 +1474,87 @@ export async function POST(req: Request) {
             dueDate: inv.DueDate ? new Date(inv.DueDate).toLocaleDateString('en-US') : 'N/A'
           }))
         }
+      }), {
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    // Check for invoice analysis queries
+    const analysisMatch = lastMessage.content.match(/(?:analyze|analyze invoices|get analysis) for (.+)/i);
+    if (analysisMatch) {
+      const customerName = analysisMatch[1];
+      
+      const resultStr = await analyzeCustomerInvoicesTool.execute({ 
+        customerName,
+        maxSteps: 5
+      });
+      const result = JSON.parse(resultStr) as InvoiceAnalysisResponse;
+
+      if (result.error) {
+        return new Response(JSON.stringify({
+          role: 'assistant',
+          content: result.error
+        }), {
+          headers: { 'Content-Type': 'application/json' }
+        });
+      }
+
+      // Format the response
+      const content = `${result.message}\n\n` +
+        `Analysis Steps:\n${result.steps.map(step => 
+          `Step ${step.step}: ${step.description}\n` +
+          `Status: ${step.status}\n` +
+          (step.details ? `Details: ${step.details}\n` : '')
+        ).join('\n')}\n\n` +
+        `Analysis Results:\n` +
+        `Total Invoices: ${result.analysis.totalInvoices}\n` +
+        `Total Amount: $${result.analysis.totalAmount.toFixed(2)}\n` +
+        `Paid Invoices: ${result.analysis.paidInvoices}\n` +
+        `Overdue Invoices: ${result.analysis.overdueInvoices}\n` +
+        `Deposited Invoices: ${result.analysis.depositedInvoices}\n` +
+        (result.analysis.averagePaymentTime ? 
+          `Average Payment Time: ${result.analysis.averagePaymentTime} days\n` : '') +
+        `Payment Trend: ${result.analysis.paymentTrend}\n` +
+        `Recent Status: ${result.analysis.recentStatus}`;
+
+      return new Response(JSON.stringify({
+        role: 'assistant',
+        content,
+        structuredData: {
+          customerName: result.customerName,
+          analysis: result.analysis,
+          steps: result.steps
+        }
+      }), {
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    // Check for investigation queries
+    const investigationMatch = lastMessage.content.match(/(?:investigate|look into|analyze in detail) (.+)/i);
+    if (investigationMatch) {
+      const query = investigationMatch[1];
+      
+      const resultStr = await investigateInvoicesTool.execute({ 
+        query,
+        maxSteps: 5
+      });
+      const result = JSON.parse(resultStr);
+
+      if (result.error) {
+        return new Response(JSON.stringify({
+          role: 'assistant',
+          content: result.error
+        }), {
+          headers: { 'Content-Type': 'application/json' }
+        });
+      }
+
+      // Return the formatted response directly
+      return new Response(JSON.stringify({
+        role: 'assistant',
+        content: result.content,
+        structuredData: result.structuredData
       }), {
         headers: { 'Content-Type': 'application/json' }
       });
