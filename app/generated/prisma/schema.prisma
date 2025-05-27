@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Invoice {
+  id               String     @id @default(cuid())
+  quickbooksId     String     @unique
+  docNumber        String
+  txnDate          DateTime
+  currencyName     String
+  currencyValue    String
+  customerName     String
+  customerValue    String
+  customerMemo     String?
+  billAddressLine1 String?
+  billAddressCity  String?
+  billAddressState String?
+  billAddressZip   String?
+  shipAddressLine1 String?
+  shipAddressCity  String?
+  shipAddressState String?
+  shipAddressZip   String?
+  salesTermName    String?
+  salesTermValue   String?
+  dueDate          DateTime
+  totalAmount      Float
+  balance          Float
+  printStatus      String
+  emailStatus      String
+  billEmail        String?
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+  lineItems        LineItem[]
+}
+
+model LineItem {
+  id              String  @id @default(cuid())
+  invoiceId       String
+  quickbooksId    String
+  lineNum         Int
+  amount          Float
+  detailType      String
+  itemName        String?
+  unitPrice       Float?
+  quantity        Float?
+  itemAccountName String?
+  taxCodeRef      String?
+  invoice         Invoice @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+}

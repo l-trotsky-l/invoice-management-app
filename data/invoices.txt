@@ -1,0 +1,14 @@
+INVOICE #001
+Customer: John Doe
+Amount: $500.00
+Date: 2024-03-15
+
+INVOICE #002
+Customer: Jane Smith
+Amount: $750.00
+Date: 2024-03-16
+
+INVOICE #003
+Customer: Bob Johnson
+Amount: $1,200.00
+Date: 2024-03-17
